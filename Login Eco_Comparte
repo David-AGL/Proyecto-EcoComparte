@@ -1,0 +1,227 @@
+package LoginFrame;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+public class LoginFrame extends JFrame {
+    private JTextField usernameField;
+    private JTextField fullNameField;
+    private JPasswordField passwordField;
+    private File usersFile;
+
+    public LoginFrame() {
+        setTitle("Login Eco_Comparte");
+        setSize(300, 150);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        // Define la ruta del archivo de texto donde se almacenarán los usuarios.
+        usersFile = new File("users.txt");
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2));
+
+        JButton loginButton = new JButton("Iniciar sesión");
+        loginButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showLoginForm();
+            }
+        });
+        panel.add(loginButton);
+
+        JButton registerButton = new JButton("Registrarse");
+        registerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showRegisterForm();
+            }
+        });
+        panel.add(registerButton);
+
+        add(panel);
+    }
+
+    private void showLoginForm() {
+        getContentPane().removeAll();
+        getContentPane().repaint();
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2));
+
+        JLabel usernameLabel = new JLabel("Nombre de usuario:");
+        panel.add(usernameLabel);
+        usernameField = new JTextField();
+        panel.add(usernameField);
+
+        JLabel passwordLabel = new JLabel("Contraseña:");
+        panel.add(passwordLabel);
+        passwordField = new JPasswordField();
+        panel.add(passwordField);
+
+        JButton submitButton = new JButton("Confirmar");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                String password = new String(passwordField.getPassword());
+
+                // Verificar si el nombre de usuario y la contraseña coinciden.
+                if (checkLogin(username, password)) {
+                    JOptionPane.showMessageDialog(LoginFrame.this, "Bienvenido "+username+" !");
+                } else {
+                    JOptionPane.showMessageDialog(LoginFrame.this, "Nombre de usuario o contraseña inválidos");
+                }
+            }
+        });
+        panel.add(submitButton);
+
+        JButton backButton = new JButton("Atrás");
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showMainForm();
+            }
+        });
+        panel.add(backButton);
+
+        add(panel);
+        revalidate();
+        repaint();
+    }
+
+    private void showRegisterForm() {
+        getContentPane().removeAll();
+        getContentPane().repaint();
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(4, 2));
+
+        JLabel usernameLabel = new JLabel("Nombre de usuario:");
+        panel.add(usernameLabel);
+        usernameField = new JTextField();
+        panel.add(usernameField);
+
+        JLabel fullNameLabel = new JLabel("Nombre Completo");
+        panel.add(fullNameLabel);
+        fullNameField = new JTextField();
+        panel.add(fullNameField);
+
+        JLabel passwordLabel = new JLabel("Contraseña:");
+        panel.add(passwordLabel);
+        passwordField = new JPasswordField();
+        panel.add(passwordField);
+
+        JButton submitButton = new JButton("Confirmar");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                String fullName = fullNameField.getText();
+                String password = new String(passwordField.getPassword());
+
+                // Verificar si el nombre de usuario ya está en uso.
+                if (usernameExists(username)) {
+                    JOptionPane.showMessageDialog(LoginFrame.this, "El nombre de usuario ya existe, introduzca uno diferente");
+                } else {
+                    // Escribe los datos del usuario en el archivo de texto.
+                    saveUser(username,password,fullName);
+                }
+            }
+        });
+        panel.add(submitButton);
+
+        JButton backButton = new JButton("Atrás");
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showMainForm();
+            }
+        });
+        panel.add(backButton);
+
+        add(panel);
+        revalidate();
+        repaint();
+    }
+
+    private void showMainForm() {
+        getContentPane().removeAll();
+        getContentPane().repaint();
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(3, 2));
+
+        JButton loginButton = new JButton("Iniciar sesión");
+        loginButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showLoginForm();
+            }
+        });
+        panel.add(loginButton);
+
+        JButton registerButton = new JButton("Registrarse");
+        registerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showRegisterForm();
+            }
+        });
+        panel.add(registerButton);
+
+        add(panel);
+        revalidate();
+        repaint();
+    }
+
+    private boolean usernameExists(String username) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(usersFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length > 0 && parts[0].equals(username)) {
+                    reader.close();
+                    return true;
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private boolean checkLogin(String username, String password) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(usersFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 3 && parts[0].equals(username) && parts[1].equals(password)) {
+                    reader.close();
+                    return true;
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    private void saveUser(String username, String password, String fullName){
+        try {
+            FileWriter writer = new FileWriter(usersFile, true);
+            writer.write(username + "," + password + "," + fullName + "\n");
+            writer.close();
+            JOptionPane.showMessageDialog(LoginFrame.this, "Registro exitoso!");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(LoginFrame.this, "Error al registrar usuario!");
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new LoginFrame().setVisible(true);
+            }
+        });
+    }
+}
