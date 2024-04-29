@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecocomparte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a id="Ecocomparte" href="index.html">Ecocomparte </a>
+        <button id="menuToggle"><img src="assets/imagenes/iconoBMenu.ico" alt="Menú"></button>
+        <div class= "toggle"> 
+            <ul id="navbar">  
+                <li><a href="CentrosDeReciclaje.html">Centros de reciclaje</a></li>
+                <li><a href="NecesitasAyuda.html">¿Necesitas ayuda?</a></li>
+                <li id="loginButton" style="display: none;"><a href="IniciarSesion.html">Iniciar sesión</a></li>
+                <li id="registerButton" style="display: none;"><a href="RegistroUsuarios.html">Crea una cuenta</a></li>
+                <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </section>
+    <div id="sidebar">
+        <a id="Ecocomparte" href="index.html">Ecocomparte </a>
+        <ul>
+            <li><a href="PublicarProducto.html">Publicar producto</a></li>
+            <li><a href="Publicaciones.html">Publicaciones</a></li>
+            <li><a href="CentrosDeReciclaje.html">Centros de reciclaje</a></li>
+            <li><a href="NecesitasAyuda.html">¿Necesitas ayuda?</a></li>
+        </ul>
+    </div>
+    <!-- Información de los Centros de Reciclaje -->
+    <div id="centrosReciclaje">
+        <h2>Centros de Reciclaje</h2>
+            <div class="centroReciclaje">
+                <h3>Ecorecyclar (Gestión sostenible)</h3>
+                <p>Dirección: Calle 80 # 51 – 15 barrio Miranda Medellín</p>
+                <p>Facebook: <a href="www.facebook.com%2Fecorecyclar">www.facebook.com%2Fecorecyclar</a></p>
+                <p>Instagram: @Ecorecyclar</p>
+                <p>Página: <a href="https://www.ecorecyclar.org/" target="_blank">https://www.ecorecyclar.org/</a></p>
+                <p>Contacto: 317-5831195</p>
+                <p>Correo: gerencia@ecorecyclar.org</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Arreciclar (Asociación de Recicladores de Antioquia)</h3>
+                <p>Dirección: Cl. 26 #44-27, Barrio Colombia Medellín</p>
+                <p>Facebook: <a href="www.facebook.com.Arreciclar.Reciclaje">www.facebook.com.Arreciclar.Reciclaje</a></p>
+                <p>Instagram: @arreciclarorg</p>
+                <p>Página: <a href="https://arreciclar.org/" target="_blank">https://arreciclar.org/</a></p>
+                <p>Contactos: 604-4236245 y 604-4085824</p>
+                <p>Correo: coordinacion@arreciclar.org</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Emvarias</h3>
+                <p>Dirección: Calle 30 #55-198 Medellín</p>
+                <p>Facebook: <a href="facebook.com/emvarias.medellin/">facebook.com/emvarias.medellin/</a></p>
+                <p>Instagram: @Emvarias</p>
+                <p>Página: <a href="https://www.emvarias.com.co/" target="_blank">https://www.emvarias.com.co/</a></p>
+                <p>Contactos: 604-3800600, 604-4445636</p>
+                <p>Correo: contacto@emvarias.com.co</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Renomax</h3>
+                <p>Dirección: Cra. 54 & Cl. 80 Sur. El palmar, La Estrella, Antioquia</p>
+                <p>Facebook: facebook.com/renomax s a s</p>
+                <p>Instagram: @Renomax SAS</p>
+                <p>Página: <a href="https://www.renomax.org/" target="_blank">https://www.renomax.org/</a></p>
+                <p>Contacto: 604-2099570</p>
+                <p>Correo: gerencia@renomax.org</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Ecobot</h3>
+                <p>Dirección: Diferentes puntos de acopio
+                    Universidad EAFIT, Universidad de Medellín
+                    CC Arkadia, CC Los Molinos, CC Premium Plaza, CC Puerta del Norte, CC San Diego, CC Santa Fe, CC Viva Envigado, Caruya Las Palmas, Exito El Poblado, Exito San Diego, Exito Bello, Exito Sabaneta.</p>
+                <p>Facebook: <a href="facebook.com/soyecobot">facebook.com/soyecobot</a></p>
+                <p>Instagram: @soyecobot</p>
+                <p>Página: <a href="https://www.ecobot.com.co/" target="_blank">https://www.ecobot.com.co/</a></p>
+                <p>Correo: ecobot@ag-corporation.com</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Fundación puntos verdes. Reciclaje tecnológico</h3>
+                <h3>RAEE  Residuos de aparatos eléctricos y electrónicos</h3>
+                <p>Dirección: Secretaría de Medio Ambiente de Envigado - Medellin Cl. 40B Sur # 37-24, Envigado, Antioquia, Colombia</p>
+                <p>Facebook: <a href="facebook.com/FundacionPuntosVerdes/">facebook.com/FundacionPuntosVerdes/</a></p>
+                <p>Instagram: @FundacionPuntosVerdes</p>
+                <p>Página: <a href="https://www.fundacionpuntosverdes.com/" target="_blank">https://www.fundacionpuntosverdes.com/</a></p>
+                <p>Correo: medellin@fundacionpuntosverdes.com.co</p>
+                <p>Contacto: 314-2776563</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Recimed. Cooperativa Multiactiva de Recicladores</h3>
+                <p>Dirección: Calle 58 #51D – 26, Medellín.</p>
+                <p>Facebook: <a href="facebook.com/Cooperativa Recimed">facebook.com/Cooperativa Recimed</a></p>
+                <p>Instagram: @cooperecimed</p>
+                <p>Página: <a href="https://reciclaje.com.co/" target="_blank">https://reciclaje.com.co/</a></p>
+                <p>Correo: inforecimed@reciclaje.com.co</p>
+                <p>Contacto: 604-6041023</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Cooperativa Recuperar</h3>
+                <p>Dirección: Carrera 46 # 51-58 Los Naranjos Itagüí, Antioquia</p>
+                <p>Facebook: <a href="facebook.com/recuperarsas">facebook.com/recuperarsas</a></p>
+                <p>Instagram: @recuperarsas</p>
+                <p>Twitter: <a href=": twitter.com/CRecuperar">: twitter.com/CRecuperar</a></p>
+                <p>Página: <a href="https://www.recuperarsas.com/" target="_blank">https://www.recuperarsas.com/</a></p>
+                <p>Correo: recuperar@recuperar.com.co</p>
+                <p>Contacto: Tel: 604-4440670</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Intermediaria de Reciclaje</h3>
+                <p>Dirección: Calle 30A # 57 - 12, Medellín</p>
+                <p>Facebook: <a href="facebook.com/intermediariadereciclaje1">facebook.com/intermediariadereciclaje1</a></p>
+                <p>Instagram: @intermediariadereciclaje</p>
+                <p>Página: <a href="https://www.intermediariadereciclaje.com/" target="_blank">https://www.intermediariadereciclaje.com/</a></p>
+                <p>Correo: intermediaria@hotmail.com</p>
+                <p>Contacto: 604-3229113 y 317-6574878</p>
+            </div>
+            <div class="centroReciclaje">
+                <h3>Corporacion Aburra limpio</h3>
+                <p>Dirección: Cra. 52 #120 A - 117, La Frontera, Medellín</p>
+                <p>Instagram: @aburra_limpio</p>
+                <p>Página: <a href="https://corporacionaburralimpio.com.co/" target="_blank">https://corporacionaburralimpio.com.co/</a></p>
+                <p>Correo: aburralimpio@hotmail.com</p>
+                <p>Contacto: 604-4489656 y 317-6408492</p>
+            </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

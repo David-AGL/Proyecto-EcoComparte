@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button-styles.css">
+</head>
+<body>
+    <h1 class="titulo">Registro</h1>
+    <section>
+        <!-- Tu formulario de registro aquí -->
+        <form id="registerForm">
+            <label for="newUsername">Nombre de usuario:</label><br>
+            <input type="text" id="newUsername" name="newUsername">
+            <label for="newPassword">Contraseña:</label><br>
+            <input type="password" id="newPassword" name="newPassword">
+            <label for="fullName">Nombre completo:</label><br>
+            <input type="text" id="fullName" name="fullName">
+            <button id="registerButton">Registrarse</button>
+            <a href="index.html" class="back-button-style back-link">Atrás</a>
+            <p id="registrationStatus"></p>
+            <h4 style="margin-bottom: 30px;">¿Ya tienes una cuenta?</h4>
+            <a href="IniciarSesion.html" class="create-button-style  back-link">Iniciar sesión</a>
+        </form>
+       
+    </section>
+    <script src="registroUsuarios.js"></script>
+</body>
+</html>
+

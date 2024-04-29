@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecocomparte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a id="Ecocomparte" href="index.html">Ecocomparte </a>
+        <button id="menuToggle"><img src="assets/imagenes/iconoBMenu.ico" alt="Menú"></button>
+        <div class= "toggle"> 
+            <ul id="navbar">  
+                <li><a href="CentrosDeReciclaje.html">Centros de reciclaje</a></li>
+                <li><a href="NecesitasAyuda.html">¿Necesitas ayuda?</a></li>
+                <li id="loginButton" style="display: none;"><a href="IniciarSesion.html">Iniciar sesión</a></li>
+                <li id="registerButton" style="display: none;"><a href="RegistroUsuarios.html">Crea una cuenta</a></li>
+                <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Cerrar sesión</a></li> 
+            </ul>
+        </div>
+    </section>
+    <form action="publicaciones.html" method="get" class="search-bar">
+        <input type="text" name="search" placeholder="Buscar...">
+        <button type="submit">&#128269;</button>
+    </form>
+    <div id="sidebar">
+        <a id="Ecocomparte" href="index.html">Ecocomparte </a>
+        <ul>
+            <li><a href="PublicarProducto.html">Publicar producto</a></li>
+            <li><a href="Publicaciones.html">Publicaciones</a></li>
+            <li><a href="CentrosDeReciclaje.html">Centros de reciclaje</a></li>
+            <li><a href="NecesitasAyuda.html">¿Necesitas ayuda?</a></li>
+        </ul>
+    </div>
+        <div id="publicaciones">
+            <!-- Aquí se mostrarán las publicaciones -->
+        </div> 
+    
+    
+    <script src="script.js"></script>
+    <script src="logout.js"></script>
+    <script src="MostrarPublicaciones.js"></script>
+</body>
+</html>
+
