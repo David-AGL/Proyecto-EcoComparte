@@ -1,0 +1,149 @@
+/* button-styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+.titulo{
+    text-align: center;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#loginForm {
+    margin: 50px auto; /* Centra el formulario */
+    max-width: 400px; /* Establece el ancho máximo del formulario */
+    padding: 30px; /* Añade espacio alrededor del formulario */
+    box-shadow: 0 0 0 2px #101084; /* Borde alrededor del formulario */
+}
+
+#loginForm p {
+    font-size: 18px; /* Texto más grande */
+    margin-bottom: 10px; /* Espacio vertical entre elementos */
+}
+
+#loginFormlabel {
+    font-size: 18px; /* Texto más grande */
+    margin-bottom: 5px; /* Espacio vertical entre elementos */
+    text-align: left; /* Alinea los marcadores a la izquierda */
+    display: block; /* Muestra cada marcador en una línea nueva */
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Añade espacio alrededor del texto */
+    margin-bottom: 15px; /* Espacio vertical entre elementos */
+}
+
+#loginButton {
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Añade espacio alrededor del botón */
+    font-size: 20px; /* Texto más grande */
+    display: block; /* Muestra el botón en una línea nueva */
+    margin-top: 20px; /* Espacio vertical arriba del botón */
+    background-color: #101084; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#loginButton:hover {
+    background-color: #0c077b; /* Cambia el color de fondo al pasar el ratón */
+}
+
+#createAccountButton{
+    display: block; 
+    margin: 0 auto; 
+    padding: 15px 20px; 
+    font-size: 15px;
+}
+
+/* En el archivo button-styles.css */
+.back-button-style {
+    text-decoration: none;
+    width: 100%; /* Ancho completo */
+    padding: 15px 30px; /* Ajusta el espaciado interno */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    margin-top: 20px; /* Espacio vertical arriba del botón */
+    background-color: #101084; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.back-button-style:hover {
+    background-color: #0c077b; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.back-link {
+    display: block; /* Hace que el enlace se comporte como un bloque */
+    text-align: center; /* Centra el texto dentro del bloque */
+    margin-top: 20px; /* Ajusta la separación vertical */
+}
+
+.create-button-style {
+    text-decoration: none;
+    width: 100%; /* Ancho completo */
+    padding: 15px 30px; /* Ajusta el espaciado interno */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    margin-top: 20px; /* Espacio vertical arriba del botón */
+    background-color: #d4d4e1; /* Color de fondo del botón */
+    color: black; /* Color de texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.create-button-style:hover{
+    background-color: #c9c9d5;
+}
+
+/* Estilos para el formulario de inicio de registro */
+#registerForm {
+    margin: 50px auto; /* Centra el formulario */
+    max-width: 400px; /* Establece el ancho máximo del formulario */
+    padding: 30px; /* Añade espacio alrededor del formulario */
+    box-shadow: 0 0 0 2px #101084; /* Borde alrededor del formulario */
+}
+
+#registerForm p {
+    font-size: 18px; /* Texto más grande */
+    margin-bottom: 10px; /* Espacio vertical entre elementos */
+}
+
+#registerForm {
+    font-size: 18px; /* Texto más grande */
+    margin-bottom: 5px; /* Espacio vertical entre elementos */
+    text-align: left; /* Alinea los marcadores a la izquierda */
+    display: block; /* Muestra cada marcador en una línea nueva */
+}
+
+#registerForm input[type="text"],
+#registerForm input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Añade espacio alrededor del texto */
+    margin-bottom: 15px; /* Espacio vertical entre elementos */
+}
+
+#registerButton {
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Añade espacio alrededor del botón */
+    font-size: 20px; /* Texto más grande */
+    display: block; /* Muestra el botón en una línea nueva */
+    margin-top: 20px; /* Espacio vertical arriba del botón */
+    background-color: #101084; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#registerButton:hover {
+    background-color: #0c077b; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+
+
+

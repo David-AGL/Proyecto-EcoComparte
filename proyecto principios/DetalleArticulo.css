@@ -1,0 +1,109 @@
+/* DetalleArticulo.css */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* DetalleArticulo.css */
+
+/* Estilo para centrar el texto */
+.text-center {
+    text-align: center;
+}
+
+
+.header {
+    background-color: #101084;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 10px; /* Agregamos un margen inferior al título */
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center; /* Centra el título */
+}
+
+.subtitle {
+    font-weight: bold;
+}
+
+.article-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 5px solid #00f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.article-container .article-text h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.article-container img {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border: 2px solid #000;
+    max-width: 100%;
+    height: auto;
+}
+
+.article-text {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #101084;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0c0c72;
+}
+
+/* Estilos para el botón de borrar publicación */
+.delete-button {
+    background-color: #da2828;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Margen superior para separarlo del contenido */
+}
+
+.delete-button:hover {
+    background-color: #c60c0c;
+}
+

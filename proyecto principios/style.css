@@ -1,0 +1,418 @@
+/*style.css*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+h2{
+    font-size: 15px;
+    line-height: 15px;
+    color: #222;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+h4{
+    font-size: 15px;
+    line-height: 15px;
+    color: #222;
+}
+
+h6{
+    font-size: 700px;
+    line-height: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    color: black;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px; /* Ajustamos el padding del encabezado */
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+#Ecocomparte{
+    text-decoration: none;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #101084;
+    margin-left: 60px;
+}
+
+#menuToggle {
+    margin-left: 20px; /* Ajustamos el margen izquierdo del botón */
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
+}
+
+#navbar li a:hover {
+    background-color: #f0f0f0; /* Color grisaseo claro */
+    border-radius: 5px; /* Opcional: Añade bordes redondeados */
+    padding: 5px 10px; /* Opcional: Ajusta el relleno para resaltar */
+}
+
+/* Barra lateral */
+#sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #e4e3e9;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000; /* Asegurar que la barra lateral se muestre encima del contenido */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+#sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    transition: margin-left 0.3s ease; /* Agregar transición para un cambio suave de margen */
+    margin-left: 0; /* Establecer el margen inicial */
+}
+
+#sidebar ul li a:hover {
+    margin-left: 5px; /* Cambiar el margen a 5px cuando el mouse pasa por encima */
+}
+
+
+#menuToggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100; /* Asegurar que esté por encima de la barra lateral */
+}
+
+#menuToggle img {
+    width: 35px; /* Establecer el ancho deseado */
+    height: 35px; /* Establecer la altura deseada */
+}
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e0dfea;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+}
+.contact {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #101084;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.contact:hover {
+    transform: translateY(-5px); /* Levantar ligeramente al pasar el mouse */
+}
+
+.contact p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+ /* barra búsqueda */
+.search-bar {
+    background-color: #101084;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0; /* Ajustar el padding vertical */
+}
+
+.search-bar input[type="text"] {
+    width: 80%; /* Ajustar el ancho del input */
+    padding: 10px; /* Ajustar el padding vertical */
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 10px 15px; /* Ajustar el padding vertical */
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* estilo de centros de reciclaje*/
+/* Estilos para la sección de Centros de Reciclaje */
+#centrosReciclaje {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#centrosReciclaje h2 {
+    font-size: 28px;
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px;
+}
+
+.centroReciclaje {
+    background-color: #101084; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.centroReciclaje:hover {
+    transform: translateY(-5px); /* Levantar ligeramente al pasar el mouse */
+}
+
+.centroReciclaje h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.centroReciclaje p {
+    margin-bottom: 5px;
+    color: white; /* Texto blanco */
+}
+
+.centroReciclaje a {
+    color: #ffc107; /* Color del enlace */
+    text-decoration: none;
+}
+
+.centroReciclaje a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+/*Publicar objeto*/
+#publicarObjeto {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container {
+    background-color: #e0dfea;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#publicarObjeto h2 {
+    margin-bottom: 30px; /* Aumentar la separación entre el título y los campos */
+    color: #101084; /* Cambiar el color del texto */
+    font-family: 'Times New Roman', sans-serif; /* Cambiar la fuente */
+    font-size: 24px; /* Aumentar el tamaño del texto */
+}
+
+.form-group {
+    margin-bottom: 40px; /* Aumentar la separación vertical entre los campos */
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* Aumentar la separación entre el título y su campo correspondiente */
+}
+
+input[type="file"],
+input[type="text"],
+textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Aumentar la separación entre los campos de entrada */
+}
+
+#publicarBtn[type="submit"] {
+    background-color: #101084;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#publicarBtn[type="submit"]:hover {
+    background-color: #0c077b;
+}
+
+/* Estilos para la vista previa de la imagen */
+.image-preview {
+    text-align: center;
+    margin-top: 20px; /* Ajustar la separación entre la imagen y los campos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajustar la altura para centrar verticalmente */
+}
+
+/* Estilos para la vista previa de la imagen */
+.image-preview p {
+    display: none; /* Ocultar el mensaje de la vista previa de la imagen */
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/* Estilos para cada publicación individual */
+.publicacion {
+    display: flex; /* Usamos flexbox para alinear elementos */
+    align-items: flex-start; /* Alineamos los elementos en la parte superior */
+    margin-bottom: 20px; /* Espacio vertical entre publicaciones */
+    border: 1px solid #ccc; /* Borde alrededor de cada publicación */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Estilos para las imágenes dentro de las publicaciones */
+.publicacion img {
+    max-width: 200px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el contenedor de texto y título dentro de las publicaciones */
+.publicacion .texto {
+    flex: 1; /* El texto ocupa todo el espacio restante */
+}
+
+/* Estilos para los títulos dentro de las publicaciones */
+.publicacion h3 {
+    color: #000; /* Color del texto */
+    margin-bottom: 10px; /* Espacio vertical entre el título y la descripción */
+}
+
+/* Estilos para la descripción del artículo */
+.publicacion .descripcion {
+    font-weight: bold; /* Hacemos la descripción negrita */
+    margin-bottom: 10px; /* Espacio vertical entre el título y la descripción */
+}
+
+/* Estilos para los párrafos dentro de las publicaciones */
+.publicacion p {
+    color: #000; /* Color del texto */
+    margin-bottom: 10px; /* Espacio vertical entre párrafos */
+}
+
+/* Estilos para los botones dentro de las publicaciones */
+.publicacion button {
+    display: block; /* Convertimos el botón en un bloque para centrarlo */
+    margin: 0 auto; /* Centramos horizontalmente */
+    background-color: #101084; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cursor al pasar por encima */
+    font-size: 16px; /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Cambio de color de fondo del botón al pasar el mouse */
+.publicacion button:hover {
+    background-color: #0c077b;
+}
+
+/* Estilos para resaltar las publicaciones al pasar el mouse */
+.publicacion:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    transform: translateY(-5px); /* Levantar ligeramente al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+
