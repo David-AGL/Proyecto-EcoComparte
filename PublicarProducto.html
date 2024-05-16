@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecocomparte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="publicarObjeto">
+        <div class="container">
+            <h2>Publicar Objeto</h2>
+            <form id="formulario" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="imagen">Imagen del Objeto:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                    <div class="image-preview">
+                        <img id="preview" src="#" alt="Vista previa de la imagen">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="materiales">Materiales Principales:</label>
+                    <input type="text" id="materiales" name="materiales" required>
+                </div>
+                <div class="form-group">
+                    <label for="contacto">Información de Contacto:</label>
+                    <input type="text" id="contacto" name="contacto" required>
+                </div>
+                <button id="publicarBtn" type="submit">Publicar</button>
+            </form>
+        </div>
+    </section>
+    <script src="PublicarScript.js"></script>
+</body>
+</html>
